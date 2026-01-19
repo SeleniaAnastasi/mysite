@@ -10,9 +10,9 @@ website:
       - href: index.qmd
         text: Home
       - href: pagina2.qmd
-        text: Progetti
+        text: Projects
       - href: pubblicazioni.qmd
-        text: Pubblicazioni
+        text: Publications
       - href: contatti.qmd
         text: Contatti
 
