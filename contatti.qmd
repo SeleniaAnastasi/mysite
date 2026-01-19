@@ -1,5 +1,5 @@
 ---
 title: "I miei progetti di ricerca"
 ---
-Qui puoi descrivere i tuoi progetti...
----
+
+## Qui puoi descrivere i tuoi progetti...
