@@ -1,8 +1,36 @@
 ---
-title: "About"
+title: "Selenia Anastasi, PhD"
+about:
+  template: trestles
+  image: profile_picture_me.jpeg
+  links:
+    - icon: linkedin
+      text: linkedin
+      href: www.linkedin.com/in/selenia-anastasi-phd-47a841b1
+    - icon: github
+      text: Github
+      href: https://github.com/SeleniaAnastasi
 ---
 
-About this site
+I am an experienced methodologist whose work consistently brings together Feminist Theories and Digital Humanities. My interdisciplinary approach combines corpus linguistics, computational linguistics and netnographic exploration to analyse digital culture, with a particular focus on platformed toxicity, polarisation dynamics and gendered forms of participation.
 
-```{Sono una ricercatrice in scienze sociali}
-```
+I have been a visiting researcher at the University of Brighton (UK) and at the Language Technology Group at the University of Hamburg (DE), where I collaborated with computer scientists and NLP experts to build and analyse a large-scale multilingual corpus. I have published in Italian and international scientific journals and, in 2019, I authored a monograph on the historical and cultural roots of Posthumanism. 
+
+I also have experience as a web developer, writer for podcasts, websites, radio and newspapers, and a long-standing passion for transmedia arts.
+
+## Education
+
+University of Genoa | Italy
+PhD in Digital Humanities | 2025 | summa cum laude
+
+University of Catania | Italy
+MA in Digital Humanities | 2021 | summa cum laude
+
+University of Catania | Italy
+BA in Communication Science | 1019
+
+## Experience
+
+External Scientific Advisor | University of Catania | Jan 2026
+
+Postdoctoral Research Fellow | University of Rome La Sapienza | Dec 2024 - Dec 2025
