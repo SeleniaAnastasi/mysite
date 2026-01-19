@@ -7,9 +7,11 @@ about:
     - icon: linkedin
       text: linkedin
       href: https://www.linkedin.com/in/selenia-anastasi-phd-47a841b1/
+      target: _blank
     - icon: github
       text: Github
       href: https://github.com/SeleniaAnastasi
+      target: _blank
 ---
 
 I am an experienced **methodologist** whose work consistently brings together **Feminist Theories** and **Digital Humanities**. My interdisciplinary approach combines corpus linguistics, computational linguistics and netnographic exploration to analyse **digital culture**, with a particular focus on platformed toxicity, polarisation dynamics and gendered forms of participation.
