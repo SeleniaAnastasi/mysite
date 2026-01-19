@@ -1,21 +1,12 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "mysite"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  title: "Nome del Mio Sito"
+  # ... altre impostazioni del menu ...
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
-    toc: true
-
-editor: visual
-

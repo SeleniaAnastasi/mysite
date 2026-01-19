@@ -1,10 +1,10 @@
 ---
-title: "mysite"
+title: "Selenia Anastasi"
 ---
 
 This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Benvenuti nel mio nuovo sito creato con Quarto sul mio Mac 2025!.
 
 ```{r}
 1 + 1
