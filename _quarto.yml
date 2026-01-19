@@ -3,10 +3,20 @@ project:
   output-dir: docs
 
 website:
-  title: "Nome del Mio Sito"
-  # ... altre impostazioni del menu ...
+  title: "Il Mio Sito"
+  navbar:               # <--- Deve avere lo stesso rientro di 'title'
+    background: dark
+    left:
+      - href: index.qmd
+        text: Home
+      - href: pagina2.qmd
+        text: Progetti
+      - href: pubblicazioni.qmd
+        text: Pubblicazioni
+      - href: contatti.qmd
+        text: Contatti
 
 format:
   html:
     theme: cosmo
-    css: styles.css
+    external-link-target: "_blank"
