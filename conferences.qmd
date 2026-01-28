@@ -12,21 +12,22 @@ format:
 #| message: false
 #| warning: false
 
+# Carichiamo le librerie necessarie
 library(leaflet)
 library(magrittr)
 
-# Carichiamo il database
+# Carichiamo il database (con la virgola come separatore)
 conferenze <- read.csv("conferenze_db.csv", stringsAsFactors = FALSE)
 
-# Forziamo le coordinate a numeri
+# Convertiamo le coordinate in numeri per evitare errori
 conferenze$lat <- as.numeric(conferenze$lat)
 conferenze$lng <- as.numeric(conferenze$lng)
 
-# Pulizia: rimuoviamo righe con coordinate mancanti
+# Rimuoviamo righe con dati mancanti
 conferenze <- conferenze[!is.na(conferenze$lat) & !is.na(conferenze$lng), ]
 
-# Palette colori aggiornata (Set3 è ottima per molte categorie diverse)
-pal <- colorFactor(palette = "Set3", domain = conferenze$type)
+# Definiamo i colori per le diverse attività (Set1 ha colori ben distinti)
+pal <- colorFactor(palette = "Set1", domain = conferenze$type)
 
 leaflet(conferenze) %>%
   addTiles() %>%
@@ -37,16 +38,21 @@ leaflet(conferenze) %>%
                    "<i>", type, "</i>"),
     color = ~pal(type),
     fillOpacity = 0.8,
-    radius = 10,
+    radius = 8,
     stroke = TRUE,
     weight = 1
   ) %>%
-  addLegend(pal = pal, values = ~type, title = "Activity Type", position = "bottomright")
+  addLegend(
+    pal = pal, 
+    values = ~type, 
+    title = "Activity Type", 
+    position = "bottomleft" # Legenda spostata per non coprire la mappa
+  )
 ```
 
 ### Lista delle Conferenze
 
 ```{r}
 #| echo: false
-knitr::kable(conferenze[, c("event_name","name", "city", "type")], col.names = c("Event", "Venue", "City", "Type"))
+knitr::kable(conferenze[, c("event_name","name", "city", "type")], col.names = c("Activity", "Venue", "City", "Type"))
 ```
