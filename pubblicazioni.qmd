@@ -1,8 +1,6 @@
 ---
-title: "Publications and network"
-format:
-  html:
-    embed-resources: true
+title: "Publications and Network"
+format: html
 ---
 
 ```{r}
@@ -16,42 +14,47 @@ library(knitr)
 
 pubs <- read.csv("pubblicazioni_db.csv", stringsAsFactors = FALSE)
 
-library(widyr)
-edges <- pubs %>%
-  separate_rows(authors, sep = ",\\s*") %>%
-  pairwise_count(authors, title, upper = FALSE) %>%
-  rename(from = item1, to = item2, value = n)
+edges_list <- list()
+for(i in 1:nrow(pubs)) {
+  authors_vec <- unlist(strsplit(pubs$authors[i], ",\\s*"))
+  if(length(authors_vec) > 1) {
+    comb <- combn(authors_vec, 2, simplify = FALSE)
+    for(c in comb) {
+      edges_list[[length(edges_list) + 1]] <- data.frame(from = c[1], to = c[2])
+    }
+  }
+}
+
+edges <- bind_rows(edges_list) %>%
+  group_by(from, to) %>%
+  summarise(width = n()*1.5, .groups = 'drop')
 
 nodes <- data.frame(id = unique(c(edges$from, edges$to))) %>%
   mutate(
     label = id,
     shape = "dot",
-    group = ifelse(id == "Anastasi S.", "Me", "Co-author"),
-    value = 10 
+    color = ifelse(id == "Anastasi S.", "#FFD1DC", "#DEF3F6"), 
+    size = ifelse(id == "Anastasi S.", 35, 20)
   )
 
 visNetwork(nodes, edges) %>%
-  visGroups(groupname = "Me", color = "#FF4136", size = 30) %>%
-  visGroups(groupname = "Co-author", color = "#0074D9") %>%
   visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
-  visPhysics(solver = "forceAtlas2Based", forceAtlas2Based = list(gravitationalConstant = -50)) %>%
-  visLayout(randomSeed = 123)
+  visPhysics(solver = "forceAtlas2Based", 
+             forceAtlas2Based = list(gravitationalConstant = -80)) %>%
+  visLayout(randomSeed = 123) %>%
+  visEvents(type = "once", startStabilizing = "function() {this.moveTo({scale:0.8})}")
+```
+
+### Lista delle Conferenze
+
 ```
 #| echo: false
 #| results: asis
 
-### Lista delle Conferenze
-
-```r
-### Peer-reviewed Publications
-
-```{r}
-#| echo: false
-#| results: asis
-
+# Formattazione stile APA: Autori (Anno). Titolo. Tipo.
 pubs %>%
   arrange(desc(year)) %>%
-  mutate(Entry = paste0("**", title, "** (", year, "). In: *", authors, "* [", type, "]")) %>%
-  select(Entry) %>%
-  kable(col.names = NULL)
+  mutate(APA = paste0(authors, " (", year, "). *", title, "*. [", type, "].")) %>%
+  select(APA) %>%
+  kable(col.names = NULL, format = "markdown")
 ```

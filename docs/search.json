@@ -2,9 +2,9 @@
   {
     "objectID": "pubblicazioni.html",
     "href": "pubblicazioni.html",
-    "title": "Publications and network",
+    "title": "Publications and Network",
     "section": "",
-    "text": "#| echo: false #| results: asis\n\nLista delle Conferenze\n```r ### Peer-reviewed Publications\n\n\n\n\n\n\nInjustice épistémique: quelle représentation nel le publications scientifiques au Québec? (2025). In: Giaufret A., Anastasi S. [Book Chapter]\n\n\nIDA-Incel Data Archive: a multimodal comparable corpus (2025). In: Anastasi S., Fischer T., Schneider F., Biemann C. [Book Chapter]\n\n\nTinder is overrated: Neoliberal affective economies in an Italian incel forum (2025). In: Anastasi S., Fragalà N. [Journal/Proceedings]\n\n\nBook review of Fundamental Principles of Corpus Linguistics (2025). In: Anastasi S. [Journal/Proceedings]\n\n\nAfterwords to Non tutti i maschi bianchi morti (2024). In: Anastasi S. [Book]\n\n\nAnnotating the IDA corpus: Misogynistic and sexist content (2024). In: Anastasi S. [Journal/Proceedings]\n\n\nVIDA-Visual Incel Data Archive (2024). In: Anastasi S., Schneider F., Fischer T., Biemann C. [Journal/Proceedings]\n\n\nGenere e geopolitica nelle discipline umanistiche digitali in Italia (2024). In: Anastasi S. [Journal/Proceedings]\n\n\nBreaking the canvas: a serious game to challenge stereotypes (2023). In: Anastasi S., Zolezzi D. [Journal/Proceedings]\n\n\nEGITH-Engendering Data: an ontology for gender in cultural heritage (2022). In: Anastasi S., De Domenico A., Nicolosi-Asmundo M. [Journal/Proceedings]\n\n\nGenderedOntoComedy: towards a gendered representation of female characters (2022). In: Anastasi S., De Domenico A., Nicolosi-Asmundo M. [Journal/Proceedings]\n\n\nBeyond ethics: an anthropodecentric approach to AI (2020). In: Anastasi S., Biuso A. G. [Journal/Proceedings]\n\n\nVerificare di essere umani. Per una teoresi del Transumanesimo (2019). In: Anastasi S. [Book]"
+    "text": "Lista delle Conferenze\n#| echo: false\n#| results: asis\n\n# Formattazione stile APA: Autori (Anno). Titolo. Tipo.\npubs %&gt;%\n  arrange(desc(year)) %&gt;%\n  mutate(APA = paste0(authors, \" (\", year, \"). *\", title, \"*. [\", type, \"].\")) %&gt;%\n  select(APA) %&gt;%\n  kable(col.names = NULL, format = \"markdown\")"
   },
   {
     "objectID": "index.html",
