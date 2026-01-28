@@ -1,11 +1,11 @@
 ---
-title: "Conferences, seminars, workshops and invited talks"
+title: "Conferences, seminars, workshops, etc."
 format:
   html:
     embed-resources: true
 ---
 
-Map automatically generated from conference locations.
+Map automatically generated from conference locations. 
 
 ```{r}
 #| echo: false
@@ -15,13 +15,20 @@ Map automatically generated from conference locations.
 library(leaflet)
 library(magrittr)
 
-conferenze <- data.frame(
-  name = c("Università di Genova", "Università di Amburgo", "Università di Brighton"),
-  lat = c(44.4056, 53.5511, 50.8225),
-  lng = c(8.9463, 9.9937, -0.1372)
-)
+# 1. Legge il database dal file CSV
+conferenze <- read.csv("conferenze_db.csv")
 
+# 2. Crea la mappa usando i dati del file
 leaflet(conferenze) %>%
   addTiles() %>%
-  addMarkers(~lng, ~lat, popup = ~name)
+  addMarkers(
+    ~lng, ~lat, 
+    popup = ~paste0("<b>", name, "</b><br>", city, "<br><i>", type, "</i>")
+  )
+```
+### Lista delle Conferenze
+
+```{r}
+#| echo: false
+knitr::kable(conferenze[, c("name", "city", "type")], col.names = c("Evento", "Città", "Tipo"))
 ```
