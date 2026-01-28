@@ -1,6 +1,8 @@
 ---
-title: "Publications and Network"
-format: html
+title: "Publications and co-authorships"
+format:
+  html:
+    embed-resources: true
 ---
 
 ```{r}
@@ -44,6 +46,7 @@ visNetwork(nodes, edges) %>%
   visLayout(randomSeed = 123) %>%
   visEvents(type = "once", startStabilizing = "function() {this.moveTo({scale:0.8})}")
 ```
+### Selected publications
 ```{r}
 #| echo: false
 #| results: asis

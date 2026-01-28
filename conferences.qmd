@@ -50,7 +50,7 @@ leaflet(conferenze) %>%
   )
 ```
 
-### Lista delle Conferenze
+### Selected conferences and invited talks
 
 ```{r}
 #| echo: false
