@@ -13,6 +13,8 @@ website:
         text: Projects
       - href: pubblicazioni.qmd
         text: Publications
+      - href: conferences.qmd
+        text: Conferences
       - href: contatti.qmd
         text: Find me
 
