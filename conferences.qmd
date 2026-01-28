@@ -9,15 +9,15 @@ library(magrittr)
 # Carichiamo il database
 conferenze <- read.csv("conferenze_db.csv", stringsAsFactors = FALSE)
 
-# FORZIAMO LE COORDINATE A NUMERI (Risolve l'errore "numeric longitude values")
+# Forziamo le coordinate a numeri
 conferenze$lat <- as.numeric(conferenze$lat)
 conferenze$lng <- as.numeric(conferenze$lng)
 
-# Rimuoviamo righe che potrebbero avere coordinate mancanti dopo la conversione
+# Pulizia: rimuoviamo righe con coordinate mancanti
 conferenze <- conferenze[!is.na(conferenze$lat) & !is.na(conferenze$lng), ]
 
-# Palette colori
-pal <- colorFactor(palette = "Set1", domain = conferenze$type)
+# Palette colori aggiornata (Set3 è ottima per molte categorie diverse)
+pal <- colorFactor(palette = "Set3", domain = conferenze$type)
 
 leaflet(conferenze) %>%
   addTiles() %>%
@@ -28,9 +28,11 @@ leaflet(conferenze) %>%
                    "<i>", type, "</i>"),
     color = ~pal(type),
     fillOpacity = 0.8,
-    radius = 8
+    radius = 10,
+    stroke = TRUE,
+    weight = 1
   ) %>%
-  addLegend(pal = pal, values = ~type, title = "Event Type", position = "bottomright")
+  addLegend(pal = pal, values = ~type, title = "Activity Type", position = "bottomright")
 ```
 ### Lista delle Conferenze
 

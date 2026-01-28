@@ -1,7 +1,7 @@
 event_name,name,city,lat,lng,type
-Università di Genova,Genova,44.4056,8.9463,Conference organisation
-Università di Amburgo,Amburgo,53.5511,9.9937,Visiting scholar
-Università di Brighton,Brighton,50.8225,-0.1372,Visiting scholar
+1° Doctoral Symposium in Digital Humanities, University of Genoa,Genova,44.4056,8.9463,Conference organisation
+Language Technology Group, University of Hamburg,Hamburg,53.5511,9.9937,Visiting scholar
+Centre for transforming sexuality and Gender, University of Brighton,Brighton,50.8225,-0.1372,Visiting scholar
 Violences de genre en ligne,Cergy Paris Université,Paris,48.8566,2.3522,Invited Talk
 Agonality in Times of Crisis,Heinrich Heine University Düsseldorf,Düsseldorf,51.2277,6.7735,Invited Talk
 Zgodovina na Spici,Institute of Contemporary History,Ljubljana,46.0569,14.5058,Invited Talk
@@ -12,20 +12,20 @@ Physis and Techne,University of Padova,Padova,45.4064,11.8768,Invited Talk
 Zoophtoria Summer School,University of Milan,Milan,45.4642,9.1900,Invited Talk
 What is Human Enhancement,Scuola Superiore di Catania,Catania,37.5079,15.0830,Invited Talk
 VII Convegno SSI,University of Cagliari,Cagliari,39.2238,9.1217,Presentation
+CMC 2025,University of Bayreuth,Bayreuth,49.9456,11.5713,Presentation
 Corpus Linguistics International Conference,Aston University,Birmingham,52.4862,-1.8904,Poster
+AIUCD 2024,University of Catania,Catania,37.5079,15.0830,Presentation
+WOAH 2024,NAACL,Mexico City,19.4326,-99.1332,Presentation
 Sociolinguistics Symposium 25,Curtin University,Perth,-32.0038,115.8948,Presentation
+CMC 2024,Université Côte d'Azur,Nice,43.7102,7.2620,Presentation
+Arts and Humanities in Digital Transition,NOVA Institute,Lisbon,38.7223,-9.1393,Presentation
 CUDAN 2023,Tallinn University,Tallinn,59.4370,24.7535,Presentation
 CMC2023,Mannheim University,Mannheim,49.4875,8.4660,Presentation
-XII Convegno Annuale AIUCD,University of Siena,Siena,43.3188,11.3308,Presentation
+AIUCD 2023,University of Siena,Siena,43.3188,11.3308,Presentation
 AI4CH22,University of Udine,Udine,46.0625,13.2354,Presentation
-XI Conference AIUCD,University of Salento,Lecce,40.3515,18.1750,Presentation
+AIUCD 2022,University of Salento,Lecce,40.3515,18.1750,Presentation
 Lavender Language and Linguistics,University of Catania,Catania,37.5079,15.0830,Presentation
 FOIS 2021,University of Bolzano,Bolzano,46.4983,11.3548,Presentation
 Corpus Linguistics 2021,University of Limerick,Limerick,52.6680,-8.6305,Presentation
-New Materialist Informatics,University of Kassel,Kassel,51.3127,9.4797,Presentation
-Arts and Humanities in Digital Transition,NOVA Institute,Lisbon,38.7223,-9.1393,Presentation
+New Materialist Informatics 2021,University of Kassel,Kassel,51.3127,9.4797,Presentation
 PhD Conference Verona,University of Verona,Verona,45.4384,10.9916,Presentation
-CMC 2024,Université Côte d'Azur,Nice,43.7102,7.2620,Presentation
-WOAH 2024,NAACL,Mexico City,19.4326,-99.1332,Presentation
-AIUCD 2024,University of Catania,Catania,37.5079,15.0830,Presentation
-CMC 2025,University of Bayreuth,Bayreuth,49.9456,11.5713,Presentation
