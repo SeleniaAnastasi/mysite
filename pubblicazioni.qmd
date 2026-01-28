@@ -44,14 +44,9 @@ visNetwork(nodes, edges) %>%
   visLayout(randomSeed = 123) %>%
   visEvents(type = "once", startStabilizing = "function() {this.moveTo({scale:0.8})}")
 ```
-
-### Lista delle Conferenze
-
-```
+```{r}
 #| echo: false
 #| results: asis
-
-# Formattazione APA: Autore, A. (Anno). Titolo. Tipo.
 pubs %>%
   arrange(desc(year)) %>%
   mutate(APA = paste0(authors, " (", year, "). ", title, ". [", type, "].")) %>%
