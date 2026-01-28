@@ -36,5 +36,5 @@ leaflet(conferenze) %>%
 
 ```{r}
 #| echo: false
-knitr::kable(conferenze[, c("name", "city", "type")], col.names = c("Evento", "Città", "Tipo"))
+knitr::kable(conferenze[, c("event_name","name", "city", "type")], col.names = c("Event", "Venue", "City", "Type"))
 ```
