@@ -52,9 +52,13 @@ visNetwork(nodes, edges) %>%
 ### Lista delle Conferenze
 
 ```{r}
-pubs %>%
-  arrange(desc(year)) %>%
-  mutate(Entry = paste0("**", title, "** (", year, "). In: *", authors, "* [", type, "]")) %>%
+#| echo: false
+#| results: asis
+
+# Usiamo il database delle conferenze, non quello delle pubblicazioni
+conferenze %>%
+  # Se hai una colonna 'year', usala per ordinare, altrimenti ometti arrange
+  # arrange(desc(year)) %>% 
+  mutate(Entry = paste0("**", event_name, "** (", city, "). *", name, "* [", type, "]")) %>%
   select(Entry) %>%
-  kable(col.names = NULL)
-```
+  knitr::kable(col.names = NULL)
