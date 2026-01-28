@@ -1,10 +1,17 @@
----
-title: "Conferences, seminars, workshops, etc."
----
-
-Map automatically generated from conference locations. Coordinates are cached locally for faster subsequent loads.
-
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
+
+library(leaflet)
+library(magrittr)
+
+conferenze <- data.frame(
+  name = c("Università di Genova", "Università di Amburgo", "Università di Brighton"),
+  lat = c(44.4056, 53.5511, 50.8225),
+  lng = c(8.9463, 9.9937, -0.1372)
+)
+
+leaflet(conferenze) %>%
+  addTiles() %>%
+  addMarkers(~lng, ~lat, popup = ~name)

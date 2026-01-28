@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Conferences, seminars, workshops, etc. – Selenia Anastasi</title>
+<title>conferences – Selenia Anastasi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,29 +118,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Conferences, seminars, workshops, etc.</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Map automatically generated from conference locations. Coordinates are cached locally for faster subsequent loads.</p>
 <p>#| echo: false #| message: false #| warning: false</p>
+<p>library(leaflet) library(magrittr)</p>
+<p>conferenze &lt;- data.frame( name = c(“Università di Genova”, “Università di Amburgo”, “Università di Brighton”), lat = c(44.4056, 53.5511, 50.8225), lng = c(8.9463, 9.9937, -0.1372) )</p>
+<p>leaflet(conferenze) %&gt;% addTiles() %&gt;% addMarkers(~lng, ~lat, popup = ~name)</p>
 
 
 
