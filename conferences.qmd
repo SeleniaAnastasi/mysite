@@ -15,10 +15,8 @@ Map automatically generated from conference locations.
 library(leaflet)
 library(magrittr)
 
-# 1. Legge il database dal file CSV
 conferenze <- read.csv("conferenze_db.csv")
 
-# 2. Crea la mappa usando i dati del file
 leaflet(conferenze) %>%
   addTiles() %>%
   addMarkers(
