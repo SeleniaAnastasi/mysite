@@ -1,5 +1,5 @@
 ---
-title: "Conferences, seminars, workshops, visiting, invited talks, summer schools"
+title: "Conferences and international activities"
 format:
   html:
     embed-resources: true
