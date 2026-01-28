@@ -1,4 +1,60 @@
 ---
-title: "I miei contatti"
+title: "Publications and network"
+format:
+  html:
+    embed-resources: true
 ---
-Qui puoi descrivere i tuoi progetti...
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(visNetwork)
+library(knitr) # Fondamentale per la funzione kable
+
+pubs <- read.csv("pubblicazioni_db.csv", check.names = FALSE)
+
+# Creazione collegamenti (edges)
+edges <- pubs %>%
+  filter(grepl(",", authors)) %>% 
+  separate_rows(authors, sep = ",\\s*") %>%
+  filter(authors != "Anastasi S.") %>%
+  count(authors, name = "weight") %>%
+  rename(from = authors) %>%
+  mutate(to = "Anastasi S.")
+
+# Creazione nodi (nodes)
+nodes <- data.frame(id = unique(c(edges$from, edges$to))) %>%
+  mutate(
+    label = id,
+    shape = "dot",
+    value = ifelse(id == "Anastasi S.", 3, 1), # Dimensione basata su importanza
+    group = case_when(
+      id == "Anastasi S." ~ "Me",
+      id %in% c("Biemann C.", "Fischer T.", "Schneider F.") ~ "Frequent",
+      TRUE ~ "Regular"
+    )
+  )
+
+visNetwork(nodes, edges) %>%
+  visGroups(groupname = "Me", color = "#FF4136") %>%
+  visGroups(groupname = "Frequent", color = "#0074D9") %>%
+  visGroups(groupname = "Regular", color = "#2ECC40") %>%
+  visOptions(highlightNearest = TRUE) %>%
+  visPhysics(solver = "forceAtlas2Based") %>%
+  visLegend(main = "Collaborations")
+```
+#| echo: false
+#| results: asis
+
+### Lista delle Conferenze
+
+```{r}
+pubs %>%
+  arrange(desc(year)) %>%
+  mutate(Entry = paste0("**", title, "** (", year, "). In: *", authors, "* [", type, "]")) %>%
+  select(Entry) %>%
+  kable(col.names = NULL)
+```
