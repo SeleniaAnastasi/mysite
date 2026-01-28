@@ -51,10 +51,10 @@ visNetwork(nodes, edges) %>%
 #| echo: false
 #| results: asis
 
-# Formattazione stile APA: Autori (Anno). Titolo. Tipo.
+# Formattazione APA: Autore, A. (Anno). Titolo. Tipo.
 pubs %>%
   arrange(desc(year)) %>%
-  mutate(APA = paste0(authors, " (", year, "). *", title, "*. [", type, "].")) %>%
+  mutate(APA = paste0(authors, " (", year, "). ", title, ". [", type, "].")) %>%
   select(APA) %>%
   kable(col.names = NULL, format = "markdown")
 ```

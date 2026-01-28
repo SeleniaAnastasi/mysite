@@ -4,7 +4,7 @@
     "href": "pubblicazioni.html",
     "title": "Publications and Network",
     "section": "",
-    "text": "Lista delle Conferenze\n#| echo: false\n#| results: asis\n\n# Formattazione stile APA: Autori (Anno). Titolo. Tipo.\npubs %&gt;%\n  arrange(desc(year)) %&gt;%\n  mutate(APA = paste0(authors, \" (\", year, \"). *\", title, \"*. [\", type, \"].\")) %&gt;%\n  select(APA) %&gt;%\n  kable(col.names = NULL, format = \"markdown\")"
+    "text": "Lista delle Conferenze\n#| echo: false\n#| results: asis\n\n# Formattazione APA: Autore, A. (Anno). Titolo. Tipo.\npubs %&gt;%\n  arrange(desc(year)) %&gt;%\n  mutate(APA = paste0(authors, \" (\", year, \"). \", title, \". [\", type, \"].\")) %&gt;%\n  select(APA) %&gt;%\n  kable(col.names = NULL, format = \"markdown\")"
   },
   {
     "objectID": "index.html",
