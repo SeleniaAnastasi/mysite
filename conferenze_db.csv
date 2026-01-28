@@ -1,24 +1,31 @@
-name,city,lat,lng,type
+event_name,name,city,lat,lng,type
 Università di Genova,Genova,44.4056,8.9463,Conference organisation
 Università di Amburgo,Amburgo,53.5511,9.9937,Visiting scholar
 Università di Brighton,Brighton,50.8225,-0.1372,Visiting scholar
-Cergy Paris Université;Paris;48.8566;2.3522;Invited Talk
-University of Venice Ca' Foscari;Venice;45.4408;12.3155;Invited Talk
-University of Màlaga;Màlaga;36.7212;-4.4214;Invited Talk
-Institute of Contemporary History;Ljubljana;46.0569;14.5058;Invited Talk
-Université de Lille;Lille;50.6292;3.0573;Invited Talk
-Heinrich Heine University;Düsseldorf;51.2277;6.7735;Invited Talk
-University of Padova;Padova;45.4064;11.8768;Invited Talk
-University of Milan;Milan;45.4642;9.1900;Invited Talk
-University of Cagliari;Cagliari;39.2238;9.1217;Presentation
-Aston University;Birmingham;52.4862;-1.8904;Poster
-Tallin University;Tallinn;59.4370;24.7535;Presentation
-Mannheim University;Mannheim;49.4875;8.4660;Presentation
-University of Siena;Siena;43.3188;11.3308;Presentation
-University of Udine;Udine;46.0625;13.2354;Presentation
-University of Salento;Lecce;40.3515;18.1750;Presentation
-University of Bolzano;Bolzano;46.4983;11.3548;Presentation
-University of Limerick;Limerick;52.6680;-8.6305;Presentation
-University of Kassel;Kassel;51.3127;9.4797;Presentation
-NOVA Institute;Lisbon;38.7223;-9.1393;Presentation
-University of Verona;Verona;45.4384;10.9916;Presentation
+Violences de genre en ligne,Cergy Paris Université,Paris,48.8566,2.3522,Invited Talk
+Agonality in Times of Crisis,Heinrich Heine University Düsseldorf,Düsseldorf,51.2277,6.7735,Invited Talk
+Zgodovina na Spici,Institute of Contemporary History,Ljubljana,46.0569,14.5058,Invited Talk
+OLINDINUM Seminar,Université de Lille,Lille,50.6292,3.0573,Invited Talk
+Mediated representation of Gender,University of Venice Ca Foscari,Venice,45.4408,12.3155,Invited Talk
+Semantic Web and Art Historical Knowledge,University of Málaga,Málaga,36.7212,-4.4214,Invited Talk
+Physis and Techne,University of Padova,Padova,45.4064,11.8768,Invited Talk
+Zoophtoria Summer School,University of Milan,Milan,45.4642,9.1900,Invited Talk
+What is Human Enhancement,Scuola Superiore di Catania,Catania,37.5079,15.0830,Invited Talk
+VII Convegno SSI,University of Cagliari,Cagliari,39.2238,9.1217,Presentation
+Corpus Linguistics International Conference,Aston University,Birmingham,52.4862,-1.8904,Poster
+Sociolinguistics Symposium 25,Curtin University,Perth,-32.0038,115.8948,Presentation
+CUDAN 2023,Tallinn University,Tallinn,59.4370,24.7535,Presentation
+CMC2023,Mannheim University,Mannheim,49.4875,8.4660,Presentation
+XII Convegno Annuale AIUCD,University of Siena,Siena,43.3188,11.3308,Presentation
+AI4CH22,University of Udine,Udine,46.0625,13.2354,Presentation
+XI Conference AIUCD,University of Salento,Lecce,40.3515,18.1750,Presentation
+Lavender Language and Linguistics,University of Catania,Catania,37.5079,15.0830,Presentation
+FOIS 2021,University of Bolzano,Bolzano,46.4983,11.3548,Presentation
+Corpus Linguistics 2021,University of Limerick,Limerick,52.6680,-8.6305,Presentation
+New Materialist Informatics,University of Kassel,Kassel,51.3127,9.4797,Presentation
+Arts and Humanities in Digital Transition,NOVA Institute,Lisbon,38.7223,-9.1393,Presentation
+PhD Conference Verona,University of Verona,Verona,45.4384,10.9916,Presentation
+CMC 2024,Université Côte d'Azur,Nice,43.7102,7.2620,Presentation
+WOAH 2024,NAACL,Mexico City,19.4326,-99.1332,Presentation
+AIUCD 2024,University of Catania,Catania,37.5079,15.0830,Presentation
+CMC 2025,University of Bayreuth,Bayreuth,49.9456,11.5713,Presentation

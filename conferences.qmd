@@ -1,12 +1,3 @@
----
-title: "Conferences, seminars, workshops, etc."
-format:
-  html:
-    embed-resources: true
----
-
-Map automatically generated from conference locations. 
-
 ```{r}
 #| echo: false
 #| message: false
@@ -15,14 +6,31 @@ Map automatically generated from conference locations.
 library(leaflet)
 library(magrittr)
 
-conferenze <- read.csv("conferenze_db.csv")
+# Carichiamo il database
+conferenze <- read.csv("conferenze_db.csv", stringsAsFactors = FALSE)
+
+# FORZIAMO LE COORDINATE A NUMERI (Risolve l'errore "numeric longitude values")
+conferenze$lat <- as.numeric(conferenze$lat)
+conferenze$lng <- as.numeric(conferenze$lng)
+
+# Rimuoviamo righe che potrebbero avere coordinate mancanti dopo la conversione
+conferenze <- conferenze[!is.na(conferenze$lat) & !is.na(conferenze$lng), ]
+
+# Palette colori
+pal <- colorFactor(palette = "Set1", domain = conferenze$type)
 
 leaflet(conferenze) %>%
   addTiles() %>%
-  addMarkers(
+  addCircleMarkers(
     ~lng, ~lat, 
-    popup = ~paste0("<b>", name, "</b><br>", city, "<br><i>", type, "</i>")
-  )
+    popup = ~paste0("<b>", event_name, "</b><br>", 
+                   name, " - ", city, "<br>",
+                   "<i>", type, "</i>"),
+    color = ~pal(type),
+    fillOpacity = 0.8,
+    radius = 8
+  ) %>%
+  addLegend(pal = pal, values = ~type, title = "Event Type", position = "bottomright")
 ```
 ### Lista delle Conferenze
 
