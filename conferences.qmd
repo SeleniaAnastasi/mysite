@@ -1,5 +1,10 @@
 ---
-title: "conferences"
-format: html
+title: "Conferences, seminars, workshops, etc."
 ---
 
+Map automatically generated from conference locations. Coordinates are cached locally for faster subsequent loads.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false

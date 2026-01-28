@@ -26,5 +26,12 @@
     "title": "Selenia Anastasi, PhD",
     "section": "Experience",
     "text": "Experience\nExternal Scientific Advisor | University of Catania | Jan 2026\nPostdoctoral Research Fellow | University of Rome La Sapienza | Dec 2024 - Dec 2025"
+  },
+  {
+    "objectID": "conferences.html",
+    "href": "conferences.html",
+    "title": "Conferences, seminars, workshops, etc.",
+    "section": "",
+    "text": "Map automatically generated from conference locations. Coordinates are cached locally for faster subsequent loads.\n#| echo: false #| message: false #| warning: false"
   }
 ]
