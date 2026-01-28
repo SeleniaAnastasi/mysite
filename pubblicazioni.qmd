@@ -12,53 +12,46 @@ format:
 
 library(tidyverse)
 library(visNetwork)
-library(knitr) # Fondamentale per la funzione kable
+library(knitr)
 
-pubs <- read.csv("pubblicazioni_db.csv", check.names = FALSE)
+pubs <- read.csv("pubblicazioni_db.csv", stringsAsFactors = FALSE)
 
-# Creazione collegamenti (edges)
+library(widyr)
 edges <- pubs %>%
-  filter(grepl(",", authors)) %>% 
   separate_rows(authors, sep = ",\\s*") %>%
-  filter(authors != "Anastasi S.") %>%
-  count(authors, name = "weight") %>%
-  rename(from = authors) %>%
-  mutate(to = "Anastasi S.")
+  pairwise_count(authors, title, upper = FALSE) %>%
+  rename(from = item1, to = item2, value = n)
 
-# Creazione nodi (nodes)
 nodes <- data.frame(id = unique(c(edges$from, edges$to))) %>%
   mutate(
     label = id,
     shape = "dot",
-    value = ifelse(id == "Anastasi S.", 3, 1), # Dimensione basata su importanza
-    group = case_when(
-      id == "Anastasi S." ~ "Me",
-      id %in% c("Biemann C.", "Fischer T.", "Schneider F.") ~ "Frequent",
-      TRUE ~ "Regular"
-    )
+    group = ifelse(id == "Anastasi S.", "Me", "Co-author"),
+    value = 10 
   )
 
 visNetwork(nodes, edges) %>%
-  visGroups(groupname = "Me", color = "#FF4136") %>%
-  visGroups(groupname = "Frequent", color = "#0074D9") %>%
-  visGroups(groupname = "Regular", color = "#2ECC40") %>%
-  visOptions(highlightNearest = TRUE) %>%
-  visPhysics(solver = "forceAtlas2Based") %>%
-  visLegend(main = "Collaborations")
+  visGroups(groupname = "Me", color = "#FF4136", size = 30) %>%
+  visGroups(groupname = "Co-author", color = "#0074D9") %>%
+  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
+  visPhysics(solver = "forceAtlas2Based", forceAtlas2Based = list(gravitationalConstant = -50)) %>%
+  visLayout(randomSeed = 123)
 ```
 #| echo: false
 #| results: asis
 
 ### Lista delle Conferenze
 
+```r
+### Peer-reviewed Publications
+
 ```{r}
 #| echo: false
 #| results: asis
 
-# Usiamo il database delle conferenze, non quello delle pubblicazioni
-conferenze %>%
-  # Se hai una colonna 'year', usala per ordinare, altrimenti ometti arrange
-  # arrange(desc(year)) %>% 
-  mutate(Entry = paste0("**", event_name, "** (", city, "). *", name, "* [", type, "]")) %>%
+pubs %>%
+  arrange(desc(year)) %>%
+  mutate(Entry = paste0("**", title, "** (", year, "). In: *", authors, "* [", type, "]")) %>%
   select(Entry) %>%
-  knitr::kable(col.names = NULL)
+  kable(col.names = NULL)
+```

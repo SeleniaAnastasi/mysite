@@ -9226,18 +9226,60 @@ HTMLWidgets.widget({
 
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item" id="htmlwidget-64a333bde71bdadefd58" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-64a333bde71bdadefd58">{"x":{"nodes":{"id":["Biemann C.","Biuso A. G.","De Domenico A.","Fischer T.","Fragalà N.","Giaufret A.","Nicolosi-Asmundo M.","Schneider F.","Zolezzi D.","Anastasi S."],"label":["Biemann C.","Biuso A. G.","De Domenico A.","Fischer T.","Fragalà N.","Giaufret A.","Nicolosi-Asmundo M.","Schneider F.","Zolezzi D.","Anastasi S."],"shape":["dot","dot","dot","dot","dot","dot","dot","dot","dot","dot"],"value":[1,1,1,1,1,1,1,1,1,3],"group":["Frequent","Regular","Regular","Frequent","Regular","Regular","Regular","Frequent","Regular","Me"]},"edges":{"from":["Biemann C.","Biuso A. G.","De Domenico A.","Fischer T.","Fragalà N.","Giaufret A.","Nicolosi-Asmundo M.","Schneider F.","Zolezzi D."],"weight":[2,1,2,2,1,1,2,2,1],"to":["Anastasi S.","Anastasi S.","Anastasi S.","Anastasi S.","Anastasi S.","Anastasi S.","Anastasi S.","Anastasi S.","Anastasi S."]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"groups":{"Me":{"color":"#FF4136"},"Frequent":{"color":"#0074D9"},"useDefaultGroups":true,"Regular":{"color":"#2ECC40"}},"physics":{"solver":"forceAtlas2Based"}},"groups":["Frequent","Regular","Me"],"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"legend":{"width":0.2,"useGroups":true,"position":"left","ncol":1,"stepX":100,"stepY":100,"zoom":true,"main":{"text":"Collaborations","style":"font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:14px;text-align:center;"}}},"evals":[],"jsHooks":[]}</script>
+<div class="visNetwork html-widget html-fill-item" id="htmlwidget-edc4381531d8d6f88bff" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-edc4381531d8d6f88bff">{"x":{"nodes":{"id":["Giaufret A.","Anastasi S.","Fischer T.","Schneider F.","De Domenico A.","Biemann C.","Fragalà N.","Zolezzi D.","Nicolosi-Asmundo M.","Biuso A. G."],"label":["Giaufret A.","Anastasi S.","Fischer T.","Schneider F.","De Domenico A.","Biemann C.","Fragalà N.","Zolezzi D.","Nicolosi-Asmundo M.","Biuso A. G."],"shape":["dot","dot","dot","dot","dot","dot","dot","dot","dot","dot"],"group":["Co-author","Me","Co-author","Co-author","Co-author","Co-author","Co-author","Co-author","Co-author","Co-author"],"value":[10,10,10,10,10,10,10,10,10,10]},"edges":{"from":["Giaufret A.","Anastasi S.","Anastasi S.","Fischer T.","Anastasi S.","Fischer T.","Schneider F.","Anastasi S.","Anastasi S.","Anastasi S.","Anastasi S.","De Domenico A.","Anastasi S."],"to":["Anastasi S.","Fischer T.","Schneider F.","Schneider F.","Biemann C.","Biemann C.","Biemann C.","Fragalà N.","Zolezzi D.","De Domenico A.","Nicolosi-Asmundo M.","Nicolosi-Asmundo M.","Biuso A. G."],"value":[1,2,2,2,2,2,2,1,1,2,2,2,1]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"groups":{"Me":{"color":"#FF4136","size":30},"useDefaultGroups":true,"Co-author":{"color":"#0074D9"}},"physics":{"solver":"forceAtlas2Based","forceAtlas2Based":{"gravitationalConstant":-50}},"layout":{"randomSeed":123}},"groups":["Co-author","Me"],"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>#| echo: false #| results: asis</p>
 <section id="lista-delle-conferenze" class="level3">
 <h3 class="anchored" data-anchor-id="lista-delle-conferenze">Lista delle Conferenze</h3>
-<p>#| echo: false #| results: asis</p>
-</section>
-<section id="usiamo-il-database-delle-conferenze-non-quello-delle-pubblicazioni" class="level1">
-<h1>Usiamo il database delle conferenze, non quello delle pubblicazioni</h1>
-<p>conferenze %&gt;% # Se hai una colonna ‘year’, usala per ordinare, altrimenti ometti arrange # arrange(desc(year)) %&gt;% mutate(Entry = paste0(“<strong>”, event_name, ”</strong> (”, city, “). <em>”, name, ”</em> [”, type, ”]”)) %&gt;% select(Entry) %&gt;% knitr::kable(col.names = NULL)</p>
+<p>```r ### Peer-reviewed Publications</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Injustice épistémique: quelle représentation nel le publications scientifiques au Québec?</strong> (2025). In: <em>Giaufret A., Anastasi S.</em> [Book Chapter]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>IDA-Incel Data Archive: a multimodal comparable corpus</strong> (2025). In: <em>Anastasi S., Fischer T., Schneider F., Biemann C.</em> [Book Chapter]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Tinder is overrated: Neoliberal affective economies in an Italian incel forum</strong> (2025). In: <em>Anastasi S., Fragalà N.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Book review of Fundamental Principles of Corpus Linguistics</strong> (2025). In: <em>Anastasi S.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Afterwords to Non tutti i maschi bianchi morti</strong> (2024). In: <em>Anastasi S.</em> [Book]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Annotating the IDA corpus: Misogynistic and sexist content</strong> (2024). In: <em>Anastasi S.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>VIDA-Visual Incel Data Archive</strong> (2024). In: <em>Anastasi S., Schneider F., Fischer T., Biemann C.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Genere e geopolitica nelle discipline umanistiche digitali in Italia</strong> (2024). In: <em>Anastasi S.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Breaking the canvas: a serious game to challenge stereotypes</strong> (2023). In: <em>Anastasi S., Zolezzi D.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>EGITH-Engendering Data: an ontology for gender in cultural heritage</strong> (2022). In: <em>Anastasi S., De Domenico A., Nicolosi-Asmundo M.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>GenderedOntoComedy: towards a gendered representation of female characters</strong> (2022). In: <em>Anastasi S., De Domenico A., Nicolosi-Asmundo M.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Beyond ethics: an anthropodecentric approach to AI</strong> (2020). In: <em>Anastasi S., Biuso A. G.</em> [Journal/Proceedings]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Verificare di essere umani. Per una teoresi del Transumanesimo</strong> (2019). In: <em>Anastasi S.</em> [Book]</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
