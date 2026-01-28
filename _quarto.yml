@@ -9,8 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      #- href: pagina2.qmd
-      #  text: Projects
+        href: pagina2.qmd
+        text: Projects
       - href: pubblicazioni.qmd
         text: Publications
       - href: conferences.qmd
