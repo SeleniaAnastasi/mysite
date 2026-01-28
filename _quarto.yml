@@ -3,13 +3,13 @@ project:
   output-dir: docs
 
 website:
-  title: "Selenia Anastasi"
-  navbar:               # <--- Deve avere lo stesso rientro di 'title'
+  title: "Selenia Anastasi, PhD"
+  navbar:
     background: dark
     left:
       - href: index.qmd
         text: Home
-        href: pagina2.qmd
+      - href: pagina2.qmd  # Ora ha il suo trattino, quindi è una voce separata
         text: Projects
       - href: pubblicazioni.qmd
         text: Publications
