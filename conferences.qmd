@@ -1,3 +1,12 @@
+---
+title: "Conferences, seminars, workshops, visiting, invited talks, summer schools"
+format:
+  html:
+    embed-resources: true
+---
+
+*Map automatically generated from conference locations.*
+
 ```{r}
 #| echo: false
 #| message: false
@@ -34,6 +43,7 @@ leaflet(conferenze) %>%
   ) %>%
   addLegend(pal = pal, values = ~type, title = "Activity Type", position = "bottomright")
 ```
+
 ### Lista delle Conferenze
 
 ```{r}
