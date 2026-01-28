@@ -49,7 +49,6 @@ visNetwork(nodes, edges) %>%
 ### Selected publications
 ```{r}
 #| echo: false
-#| results: asis
 pubs %>%
   arrange(desc(year)) %>%
   mutate(APA = paste0(authors, " (", year, "). ", title, ". [", type, "].")) %>%
