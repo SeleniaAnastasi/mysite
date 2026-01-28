@@ -30,8 +30,8 @@
   {
     "objectID": "conferences.html",
     "href": "conferences.html",
-    "title": "Selenia Anastasi",
+    "title": "Conferences, seminars, workshops and invited talks",
     "section": "",
-    "text": "#| echo: false #| message: false #| warning: false\nlibrary(leaflet) library(magrittr)\nconferenze &lt;- data.frame( name = c(“Università di Genova”, “Università di Amburgo”, “Università di Brighton”), lat = c(44.4056, 53.5511, 50.8225), lng = c(8.9463, 9.9937, -0.1372) )\nleaflet(conferenze) %&gt;% addTiles() %&gt;% addMarkers(~lng, ~lat, popup = ~name)"
+    "text": "Map automatically generated from conference locations."
   }
 ]

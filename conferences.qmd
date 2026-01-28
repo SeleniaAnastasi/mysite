@@ -1,3 +1,12 @@
+---
+title: "Conferences, seminars, workshops and invited talks"
+format:
+  html:
+    embed-resources: true
+---
+
+Map automatically generated from conference locations.
+
 ```{r}
 #| echo: false
 #| message: false
@@ -15,3 +24,4 @@ conferenze <- data.frame(
 leaflet(conferenze) %>%
   addTiles() %>%
   addMarkers(~lng, ~lat, popup = ~name)
+```
