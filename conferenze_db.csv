@@ -1,0 +1,7 @@
+conferenze_db
+Tabella 1;;;;;;
+Name;City;Lat;Lng;Type;;
+name;city;lat;lng;type;;
+Università di Genova;Genova;44.4056;8.9463;Invited Talk;;
+Università di Amburgo;Amburgo;53.5511;9.9937;Poster;;
+Università di Brighton;Brighton;50.8225;-0.1372;Attendance;;
