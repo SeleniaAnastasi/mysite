@@ -1,4 +1,64 @@
 ---
-title: "Projects"
-format: html
+title: "Projects and Research"
+format:
+  html:
+    embed-resources: true
 ---
+
+### Independent Project (2025-ongoing)
+
+**Female Influencers in the Digital Hall of Mirrors**\
+Study on female influencers in the Italian digital sphere, with a focus on gender performativity, virality, and the aestheticisation of politics on TikTok.
+
+### Corsica–Canioni Correspondence
+
+Research collaboration on archives and historical sources related to the Corsica–Canioni correspondence.\
+**Principal Investigator:** Prof. Anna Giaufret, Prof. Beatrice Dal Bo\
+🔗 [Official website](#0)
+
+### PRIN–PNRR (2022–2025) - CORIT
+
+**Countering Online Radicalisation and Incivility in Italy: from Fringe to Mainstream**\
+PRIN–PNRR project focused on processes of online radicalisation and the dynamics of digital incivility in the Italian context.\
+**Principal Investigator:** Prof. Giovanni Boccia Artieri, Prof. Sara Bentivegna, Prof. Rossella Rega\
+🔗 [Project page](https://project.uniurb.it/corit/selenia-anastasi-junior-researcher/)
+
+### PRIN (2022–2025) - EUQuest
+
+**Questioning the EU. Politicisation, Representation, and Agenda Setting in the European Parliament**\
+PRIN project, University of Catania, Department of Political and Social Sciences. The research investigates processes of EU politicisation, political representation, and agenda-setting within the European Parliament.\
+**Principal Investigator:** Prof. Marcello Carammia
+
+### PhD Dissertation (2025) - University of Genoa
+
+**Misogyny Beyond Borders: A Corpus-Assisted Cross-Linguistic Analysis of Transnational Incel Communities**\
+Doctoral dissertation focused on the linguistic and discursive analysis of transnational incel communities, adopting a corpus-assisted and comparative approach.\
+**Supervisors:** Prof. Anna Giaufret, Prof. Dr. Chris Biemann, Prof. Ilaria Torre
+
+## Keywords
+
+-   Online radicalisation\
+
+-   Digital incivility\
+
+-   Political discourse\
+
+-   Social media studies\
+
+-   Gender studies\
+
+-   Gender performativity\
+
+-   Influencer culture\
+
+-   TikTok and politics\
+
+-   Online misogyny\
+
+-   Incel communities\
+
+-   Computational linguistics\
+
+-   Corpus linguistics\
+
+-   European political communication
